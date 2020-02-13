@@ -1,27 +1,30 @@
-swagger: "2.0"
-
+openapi: 3.0.1
 info:
-  title: "Hello world Api"
+  title: Hello world Api
   version: "1.0"
 
-basePath: /api/v1/
+servers:
+- url: /helloworld/
 
 paths:
   /items/:
     get:
       responses:
-        '200':
-          description: 'Fetch a list of items'
-          schema:
-            type: array
-            items:
-              $ref: '#/definitions/Item'
-
-definitions:
-  Item:
-    type: object
-    properties:
-      id:
-        type: integer
-        format: int64
-      name: { type: string }
+        200:
+          description: Fetch a list of items
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Item'
+components:
+  schemas:
+    Item:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string

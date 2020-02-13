@@ -1,7 +1,7 @@
-items = {
-    0: {"name": "First item"}
-}
-
 
 def search() -> list:
-    return items
+
+    return {
+        0: {"name": "Test", "description": "Item description"},
+        1: {"name": "Test2", "description": "Item 2 description"}
+    }
