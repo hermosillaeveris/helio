@@ -25,7 +25,7 @@
         9090
     ],
     // Uncomment the next line to run commands after the container is created - for example installing git.
-    "postCreateCommand": "apk update && apk upgrade && apk add build-base && apk add --no-cache git && pip install pylint && pip install -U autopep8",
+    "postCreateCommand": "apk update && apk upgrade && apk add build-base && apk add --no-cache git && pip install pytest coverage pylint autopep8",
     // Uncomment when using a ptrace-based debugger like C++, Go, and Rust
     // "runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
     // Uncomment to use the Docker CLI from inside the container. See https://aka.ms/vscode-remote/samples/docker-in-docker.
